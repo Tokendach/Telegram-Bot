@@ -218,7 +218,7 @@ async def admin_leaderboard(update: Update, context: ContextTypes.DEFAULT_TYPE) 
 
 async def leaderboard(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)
-    leaderboard_message = "📊 Таблица лидеров:\n"
+    leaderboard_message = "📊 Лудший Дачник:\n"
     
     for i, (user_id, score) in enumerate(sorted_scores[:10], start=1):
         user = await context.bot.get_chat(user_id)
