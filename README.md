@@ -42,9 +42,7 @@ scores = load_scores()
 referrals = load_referrals()
 user_data = {}
 
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    user_id = update.message.from_user.id
-    referral_link = f"https://t.me/{context.bot.username}?start={user_id}"
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -
 
     keyboard = [
         [InlineKeyboardButton("🔨 Собрать урожай", callback_data='mine')],
